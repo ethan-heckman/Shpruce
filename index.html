@@ -1,130 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Rustic Spoon — Home Cooking, Simplified</title>
-  <meta name="description" content="A food blog with easy, tested recipes for weeknight dinners, baking, and more." />
-  <link rel="stylesheet" href="css/style.css" />
+<meta charset="UTF-8">
+<title>Linda's Cozy Kitchen Journal</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="container">
-      <a href="index.html" class="brand"><span class="leaf">🌿</span> The Rustic Spoon</a>
-      <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="index.html#recipes">Recipes</a></li>
-          <li><a href="about.html">About</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<header>
+    <h1>Cozy Kitchen Journal</h1>
+    <p>Simple meals, slow moments, and recipes worth keeping</p>
+    <button onclick="toggleDarkMode()">Toggle Cozy Mode</button>
+</header>
 
-  <section class="hero">
-    <h1>Simple recipes, real food.</h1>
-    <p>Tested, no-fuss recipes for weeknight dinners, weekend baking, and everything in between.</p>
-    <div class="search-bar">
-      <input type="text" id="recipe-search" placeholder="Search recipes (e.g. pasta, chicken, cookies)..." />
-    </div>
-  </section>
+<input 
+    type="text" 
+    id="search" 
+    placeholder="Search recipes..." 
+    onkeyup="searchRecipes()"
+>
 
-  <main class="container" id="recipes">
-    <h2 class="section-title">Latest Recipes</h2>
+<!-- FILTERS -->
+<div class="filters">
+    <button onclick="filterRecipes('all')">All</button>
+    <button onclick="filterRecipes('breakfast')">Breakfast</button>
+    <button onclick="filterRecipes('dinner')">Dinner</button>
+    <button onclick="filterRecipes('dessert')">Dessert</button>
+</div>
 
-    <div class="recipe-grid">
+<!-- RECIPE 1 -->
+<section class="recipe dinner">
+    <h2>Creamy Chicken Pasta</h2>
+    <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b" alt="pasta">
 
-      <article class="recipe-card" style="--accent:#e8b04b" data-search="creamy garlic parmesan pasta dinner pasta easy">
-        <div class="card-thumb" style="background:#f6e4c8;">🍝</div>
-        <div class="card-body">
-          <div class="card-tag">Dinner</div>
-          <h3><a href="recipes/creamy-garlic-parmesan-pasta.html">Creamy Garlic Parmesan Pasta</a></h3>
-          <p class="card-excerpt">A rich, silky pasta sauce made with garlic, parmesan, and cream — ready in 25 minutes.</p>
-          <div class="card-meta">
-            <span>⏱ 25 min</span>
-            <span>🍽 4 servings</span>
-          </div>
-        </div>
-      </article>
+    <div class="like" data-recipe="pasta" onclick="toggleLike(this, 'pasta')">❤️</div>
+    <div class="rating" data-recipe="pasta" onclick="rate(this, 'pasta', 5)">⭐⭐⭐⭐⭐</div>
 
-      <article class="recipe-card" data-search="classic chocolate chip cookies dessert baking cookies">
-        <div class="card-thumb" style="background:#e9d3b4;">🍪</div>
-        <div class="card-body">
-          <div class="card-tag">Dessert</div>
-          <h3><a href="recipes/classic-chocolate-chip-cookies.html">Classic Chocolate Chip Cookies</a></h3>
-          <p class="card-excerpt">Crisp edges, chewy centers — the only chocolate chip cookie recipe you'll ever need.</p>
-          <div class="card-meta">
-            <span>⏱ 35 min</span>
-            <span>🍪 24 cookies</span>
-          </div>
-        </div>
-      </article>
+    <button onclick="toggleRecipe('pastaContent')">View Recipe</button>
 
-      <article class="recipe-card" data-search="lemon herb roast chicken dinner roast chicken">
-        <div class="card-thumb" style="background:#f2d9b0;">🍗</div>
-        <div class="card-body">
-          <div class="card-tag">Dinner</div>
-          <h3><a href="recipes/lemon-herb-roast-chicken.html">Lemon Herb Roast Chicken</a></h3>
-          <p class="card-excerpt">A juicy, golden roast chicken with lemon, garlic, and fresh herbs — a Sunday classic.</p>
-          <div class="card-meta">
-            <span>⏱ 1 hr 30 min</span>
-            <span>🍽 6 servings</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="recipe-card" data-search="spicy black bean tacos vegetarian dinner tacos mexican">
-        <div class="card-thumb" style="background:#f5cdb0;">🌮</div>
-        <div class="card-body">
-          <div class="card-tag">Vegetarian</div>
-          <h3><a href="recipes/spicy-black-bean-tacos.html">Spicy Black Bean Tacos</a></h3>
-          <p class="card-excerpt">Smoky, spiced black beans piled into warm tortillas with all your favorite toppings.</p>
-          <div class="card-meta">
-            <span>⏱ 20 min</span>
-            <span>🍽 4 servings</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="recipe-card" data-search="loaded veggie stir fry vegetarian dinner stir-fry healthy">
-        <div class="card-thumb" style="background:#d7e3b0;">🥦</div>
-        <div class="card-body">
-          <div class="card-tag">Vegetarian</div>
-          <h3><a href="recipes/loaded-veggie-stir-fry.html">Loaded Veggie Stir-Fry</a></h3>
-          <p class="card-excerpt">A quick, colorful stir-fry with a savory garlic-ginger sauce — endlessly customizable.</p>
-          <div class="card-meta">
-            <span>⏱ 20 min</span>
-            <span>🍽 4 servings</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="recipe-card" data-search="fluffy buttermilk pancakes breakfast pancakes weekend">
-        <div class="card-thumb" style="background:#f7e2b8;">🥞</div>
-        <div class="card-body">
-          <div class="card-tag">Breakfast</div>
-          <h3><a href="recipes/fluffy-buttermilk-pancakes.html">Fluffy Buttermilk Pancakes</a></h3>
-          <p class="card-excerpt">Light, fluffy pancakes with crisp edges — the perfect lazy weekend breakfast.</p>
-          <div class="card-meta">
-            <span>⏱ 20 min</span>
-            <span>🍽 4 servings</span>
-          </div>
-        </div>
-      </article>
-
+    <div id="pastaContent" class="content">
+        <p>Comforting and creamy dinner favorite.</p>
     </div>
 
-    <p class="no-results">No recipes found. Try a different search.</p>
-  </main>
+    <div class="comments">
+        <h3>Comments</h3>
+        <div id="comments-pasta"></div>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2026 The Rustic Spoon. All recipes tested in a real kitchen.</p>
+        <input id="name-pasta" placeholder="Your name">
+        <input id="input-pasta" placeholder="Write a comment">
+        <button onclick="addComment('pasta')">Post</button>
     </div>
-  </footer>
+</section>
 
-  <script src="js/main.js"></script>
+<!-- RECIPE 2 -->
+<section class="recipe dessert">
+    <h2>Chocolate Chip Cookies</h2>
+    <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e" alt="cookies">
+
+    <div class="like" data-recipe="cookie" onclick="toggleLike(this, 'cookie')">❤️</div>
+    <div class="rating" data-recipe="cookie" onclick="rate(this, 'cookie', 5)">⭐⭐⭐⭐⭐</div>
+
+    <button onclick="toggleRecipe('cookieContent')">View Recipe</button>
+
+    <div id="cookieContent" class="content">
+        <p>Warm cookies straight from the oven.</p>
+    </div>
+
+    <div class="comments">
+        <h3>Comments</h3>
+        <div id="comments-cookie"></div>
+
+        <input id="name-cookie" placeholder="Your name">
+        <input id="input-cookie" placeholder="Write a comment">
+        <button onclick="addComment('cookie')">Post</button>
+    </div>
+</section>
+
+<!-- UPLOAD FORM -->
+<section class="upload">
+    <h2>Share a Recipe</h2>
+
+    <input id="newTitle" placeholder="Recipe name">
+
+    <select id="newCategory">
+        <option value="breakfast">Breakfast</option>
+        <option value="dinner">Dinner</option>
+        <option value="dessert">Dessert</option>
+    </select>
+
+    <button onclick="addRecipe()">Add Recipe</button>
+</section>
+
+<script src="script.js"></script>
 </body>
 </html>
