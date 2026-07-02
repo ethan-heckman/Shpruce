@@ -1,270 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shpruce — Under Construction</title>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-1 38 212 226'%3E%3Cg transform='matrix(3.5,0,0,3.5,-245,-368.056)'%3E%3Cpath fill='%2356765a' d='M 100,180 130,170 100,130 Z'/%3E%3Cpath fill='%2356765a' d='M 100,150 120,143.33 100,116.67 Z'/%3E%3Cpath fill='%233e5641' d='M 100,180 70,170 100,130 Z'/%3E%3Cpath fill='%233e5641' d='M 100,150 80,143.33 100,116.67 Z'/%3E%3C/g%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root {
-  --bg:        #f1f4f2;
-  --bg-card:   #ffffff;
-  --bg-raised: #e0e8e2;
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content ="This is Ethan's Final Assignment">
+        <title>Shpruce</title>
+        <link rel="stylesheet" href="css/style.css">
+        <meta charset="UTF-8">
+        <!--Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <!--Scroll Reset Func-->
+        <script>
+            if('history' in window && 'scrollRestoration' in window){
+                history.scrollRestoration = 'manual';
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <!--Logo-->
+            <a href="../cb4/index.html">
+                <div class="logo"><img src="images/shpruce-wordmark-light.svg" width="185" height="72"></div>
+            </a>
+            <!--Content-->
+            <div class="header-links">
+                <!-- <span class="bar">&nbsp;&nbsp;|&nbsp;&nbsp;</span> -->
+                <a href="pages/compose.html">Compose</a>
+                <span class="bar">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                <a href="https://shpruce.co/">Login</a>
+                <!-- <a href="#about-us">About</a>
+                &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp; -->
+            </div>
+            <!--Login Button-->
+            <!-- <div class="login-button"><button type="button">&nbsp;Login&nbsp;</button></div> -->
+        </header>
 
-  --border:    #b8cabb;
-  --border-sub:#c8d5ca;
+        <div class="white-space"></div>
 
-  --text-hi:   #141f16;
-  --text-lo:   #58765e;
-  --text-mute: #657366;
+        <div class="breathe-easy">
+            <span>B</span><span>r</span><span>e</span><span>a</span><span>t</span><span>h</span><span>e</span><span>&nbsp;</span><span>e</span><span>a</span><span>s</span><span>y</span><span>.</span>
+        </div>
 
-  --accent:    #3e5641;
-  --r-md:  10px;
-}
+        <div class="white-space"></div><div class="white-space"></div>
 
-* { box-sizing: border-box; }
-
-html, body {
-  margin: 0;
-  height: 100%;
-}
-
-body {
-  background: var(--bg);
-  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2.25rem;
-}
-
-/* Enlarged nerd-mode box */
-#glasses-box {
-  width: 128px;
-  height: 128px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-  border: 1px solid var(--border);
-  border-radius: 46px;
-  color: var(--text-lo);
-  cursor: pointer;
-  transition: background 0.15s, color 0.15s, border-color 0.15s;
-}
-
-#glasses-box:hover { background: var(--bg-card); color: var(--text-hi); border-color: var(--bg-raised); }
-#glasses-box.active { background: var(--bg-card); border-color: var(--border); }
-
-#glasses-box svg { display: block; color: inherit; }
-
-#glasses-icon-face    { width: 91px; height: 27px; }
-#glasses-icon-glasses { width: 91px; height: 46px; display: none; }
-
-h1 {
-  margin: 0;
-  font-size: 1.05rem;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  color: var(--text-mute);
-  text-align: center;
-}
-
-.logo-mark {
-  display: block;
-  width: 1.425em;
-  height: 1.425em;
-  margin-top: -1.5rem;
-}
-</style>
-</head>
-<body>
-  <div class="wrap">
-    <div id="glasses-box" title="Nerd Mode">
-      <svg id="glasses-icon-face" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 6" style="overflow:visible;">
-        <circle id="face-eye-l" cx="4.5" cy="3" r="1.6" fill="currentColor"/>
-        <circle id="face-eye-r" cx="15.5" cy="3" r="1.6" fill="currentColor"/>
-      </svg>
-      <svg id="glasses-icon-glasses" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 10" style="overflow:visible;">
-        <g id="glasses-group">
-          <line x1="1.3" y1="5" x2="0" y2="4.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-          <circle cx="4.5" cy="5" r="3.2" fill="none" stroke="currentColor" stroke-width="1.7"/>
-          <path d="M 7.7 5 Q 10 3.2 12.3 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-          <circle cx="15.5" cy="5" r="3.2" fill="none" stroke="currentColor" stroke-width="1.7"/>
-          <line x1="18.7" y1="5" x2="20" y2="4.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-        </g>
-      </svg>
-    </div>
-    <h1>Watch this space.</h1>
-    <svg class="logo-mark" viewBox="-1 38 212 226" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <g transform="matrix(3.5,0,0,3.5,-245,-368.056)">
-        <path fill="#56765a" d="M 100,180 130,170 100,130 Z"/>
-        <path fill="#56765a" d="M 100,150 120,143.33 100,116.67 Z"/>
-        <path fill="#3e5641" d="M 100,180 70,170 100,130 Z"/>
-        <path fill="#3e5641" d="M 100,150 80,143.33 100,116.67 Z"/>
-      </g>
-    </svg>
-  </div>
-
-<script>
-// ── Glasses removable toggle + cursor tracking — ported from the app's nerd-mode icon ────────
-(function() {
-  const box         = document.getElementById('glasses-box');
-  const iconFace     = document.getElementById('glasses-icon-face');
-  const iconGlasses  = document.getElementById('glasses-icon-glasses');
-
-  let on = true; // glasses on by default
-
-  function dropGlasses() {
-    const bRect = box.getBoundingClientRect();
-
-    const floater = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-    floater.setAttribute('width', '91');
-    floater.setAttribute('height', '46');
-    floater.setAttribute('viewBox', '0 0 20 10');
-    floater.style.cssText = `position:fixed;pointer-events:none;z-index:9999;
-      left:${bRect.left + bRect.width / 2 - 45.5}px;
-      top:${bRect.top + bRect.height / 2 - 23}px;
-      color:var(--text-lo);`;
-    floater.innerHTML =
-      `<line x1="1.3" y1="5" x2="0" y2="4.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>` +
-      `<circle cx="4.5" cy="5" r="3.2" fill="none" stroke="currentColor" stroke-width="1.7"/>` +
-      `<path d="M 7.7 5 Q 10 3.2 12.3 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>` +
-      `<circle cx="15.5" cy="5" r="3.2" fill="none" stroke="currentColor" stroke-width="1.7"/>` +
-      `<line x1="18.7" y1="5" x2="20" y2="4.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>`;
-    document.body.appendChild(floater);
-
-    const startTop  = bRect.top + bRect.height / 2 - 23;
-    const fadeEdge  = window.innerHeight;            // fade out as they clear the viewport
-    const fallDist  = fadeEdge - startTop + 91;
-    const duration  = 420;
-    const startTime = performance.now();
-
-    (function step(ts) {
-      const t     = Math.min((ts - startTime) / duration, 1);
-      const ease  = t * t;                            // ease-in = gravity acceleration
-      const top   = startTop + fallDist * ease;
-      const tilt  = ease * 38;                        // tilts as they fall
-      const drift = ease * 27;                        // slight slide to the right (scaled)
-
-      floater.style.top       = top + 'px';
-      floater.style.left      = (bRect.left + bRect.width / 2 - 45.5 + drift) + 'px';
-      floater.style.transform = `rotate(${tilt}deg)`;
-
-      const fadeOver = 46;                            // px over which to fade (scaled)
-      floater.style.opacity = top < fadeEdge - fadeOver ? '1'
-        : top > fadeEdge ? '0'
-        : String(1 - (top - (fadeEdge - fadeOver)) / fadeOver);
-
-      if (t < 1) requestAnimationFrame(step);
-      else floater.remove();
-    })(startTime);
-  }
-
-  box.addEventListener('click', () => {
-    on = !on;
-    iconFace.style.display    = on ? 'none' : '';
-    iconGlasses.style.display = on ? '' : 'none';
-    if (!on) dropGlasses();
-    box.classList.toggle('active', on);
-    box.title = on ? 'Remove glasses' : 'Nerd Mode';
-  });
-
-  // Face dots: SVG centre positions in viewBox coords (20×6)
-  const FACE_EYES = [
-    { el: null, cx: 4.5,  cy: 3, maxX: 2.8, maxY: 1.6 },
-    { el: null, cx: 15.5, cy: 3, maxX: 2.8, maxY: 1.6 },
-  ];
-
-  const GLASSES_MAX_X = 2.8;
-  const GLASSES_MAX_Y = 1.6;
-  const DEAD_ZONE_PX = 90; // just beyond the box's 64px radius
-  const LERP = 0.22;
-
-  let faceTarget    = FACE_EYES.map(e => ({ cx: e.cx, cy: e.cy }));
-  let faceCurrent   = FACE_EYES.map(e => ({ cx: e.cx, cy: e.cy }));
-  let glassesTarget  = { x: 0, y: 0 };
-  let glassesCurrent  = { x: 0, y: 0 };
-  let glassesGroup = null;
-  let mouseX = -9999, mouseY = -9999;
-
-  function computeTargets() {
-    const rect = box.getBoundingClientRect();
-    const bx   = rect.left + rect.width  / 2;
-    const by   = rect.top  + rect.height / 2;
-
-    const dx   = mouseX - bx;
-    const dy   = mouseY - by;
-    const dist = Math.sqrt(dx * dx + dy * dy);
-
-    const strength = dist < DEAD_ZONE_PX ? 0
-                   : Math.min(1, (dist - DEAD_ZONE_PX) / DEAD_ZONE_PX);
-    const nx = dist > 0 ? dx / dist : 0;
-    const ny = dist > 0 ? dy / dist : 0;
-
-    FACE_EYES.forEach((def, i) => {
-      faceTarget[i].cx = def.cx + nx * def.maxX * strength;
-      faceTarget[i].cy = def.cy + ny * def.maxY * strength;
-    });
-
-    glassesTarget.x = nx * GLASSES_MAX_X * strength;
-    glassesTarget.y = ny * GLASSES_MAX_Y * strength;
-  }
-
-  function lerp(a, b, t) { return a + (b - a) * t; }
-
-  function applyPositions() {
-    FACE_EYES.forEach((def, i) => {
-      faceCurrent[i].cx = lerp(faceCurrent[i].cx, faceTarget[i].cx, LERP);
-      faceCurrent[i].cy = lerp(faceCurrent[i].cy, faceTarget[i].cy, LERP);
-      if (def.el) {
-        def.el.setAttribute('cx', faceCurrent[i].cx.toFixed(3));
-        def.el.setAttribute('cy', faceCurrent[i].cy.toFixed(3));
-      }
-    });
-
-    glassesCurrent.x = lerp(glassesCurrent.x, glassesTarget.x, LERP);
-    glassesCurrent.y = lerp(glassesCurrent.y, glassesTarget.y, LERP);
-    if (glassesGroup) {
-      glassesGroup.setAttribute('transform',
-        `translate(${glassesCurrent.x.toFixed(3)},${glassesCurrent.y.toFixed(3)})`);
-    }
-  }
-
-  function loop() {
-    computeTargets();
-    applyPositions();
-    requestAnimationFrame(loop);
-  }
-
-  document.addEventListener('mousemove', e => { mouseX = e.clientX; mouseY = e.clientY; });
-
-  function init() {
-    FACE_EYES[0].el = document.getElementById('face-eye-l');
-    FACE_EYES[1].el = document.getElementById('face-eye-r');
-    glassesGroup    = document.getElementById('glasses-group');
-    iconFace.style.display    = 'none';
-    iconGlasses.style.display = '';
-    box.classList.add('active');
-    box.title = 'Remove glasses';
-    loop();
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else {
-    init();
-  }
-})();
-</script>
-</body>
+        <div class="orbit-anim">
+            <div class="orbit-tree">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 38 212 226" width="60" height="60">
+                    <g transform="matrix(3.5,0,0,3.5,-245,-368.056)">
+                        <path fill="#56765a" d="M 100,180 130,170 100,130 Z"/>
+                        <path fill="#56765a" d="M 100,150 120,143.33 100,116.67 Z"/>
+                        <path fill="#3e5641" d="M 100,180 70,170 100,130 Z"/>
+                        <path fill="#3e5641" d="M 100,150 80,143.33 100,116.67 Z"/>
+                    </g>
+                </svg>
+            </div>
+            <div class="orbit-pdf">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 16 16">
+                    <path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1"/>
+                    <path d="M4.603 12.087a.8.8 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.7 7.7 0 0 1 1.482-.645 20 20 0 0 0 1.062-2.227 7.3 7.3 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a11 11 0 0 0 .98 1.686 5.8 5.8 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.86.86 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.7 5.7 0 0 1-.911-.95 11.6 11.6 0 0 0-1.997.406 11.3 11.3 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.8.8 0 0 1-.58.029m1.379-1.901q-.25.115-.459.238c-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361q.016.032.026.044l.035-.012c.137-.056.355-.235.635-.572a8 8 0 0 0 .45-.606m1.64-1.33a13 13 0 0 1 1.01-.193 12 12 0 0 1-.51-.858 21 21 0 0 1-.5 1.05zm2.446.45q.226.244.435.41c.24.19.407.253.498.256a.1.1 0 0 0 .07-.015.3.3 0 0 0 .094-.125.44.44 0 0 0 .059-.2.1.1 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a4 4 0 0 0-.612-.053zM8.078 5.8a7 7 0 0 0 .2-.828q.046-.282.038-.465a.6.6 0 0 0-.032-.198.5.5 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822q.036.167.09.346z"/>
+                </svg>
+            </div>
+            <div class="orbit-word">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 16 16">
+                    <path d="M4.879 4.515a.5.5 0 0 1 .606.364l1.036 4.144.997-3.655a.5.5 0 0 1 .964 0l.997 3.655 1.036-4.144a.5.5 0 0 1 .97.242l-1.5 6a.5.5 0 0 1-.967.01L8 7.402l-1.018 3.73a.5.5 0 0 1-.967-.01l-1.5-6a.5.5 0 0 1 .364-.606z"/>
+                    <path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1"/>
+                </svg>
+            </div>
+            <div class="orbit-ppt">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 16 16">
+                    <path d="M5 4a.5.5 0 0 0-.496.438l-.5 4A.5.5 0 0 0 4.5 9h3v2.016c-.863.055-1.5.251-1.5.484 0 .276.895.5 2 .5s2-.224 2-.5c0-.233-.637-.429-1.5-.484V9h3a.5.5 0 0 0 .496-.562l-.5-4A.5.5 0 0 0 11 4zm2 3.78V5.22c0-.096.106-.156.19-.106l2.13 1.279a.125.125 0 0 1 0 .214l-2.13 1.28A.125.125 0 0 1 7 7.778z"/>
+                    <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1"/>
+                </svg>
+            </div>
+            <div class="orbit-music">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 16 16">
+                    <path d="M10.304 3.13a1 1 0 0 1 1.196.98v1.8l-2.5.5v5.09c0 .495-.301.883-.662 1.123C7.974 12.866 7.499 13 7 13s-.974-.134-1.338-.377C5.302 12.383 5 11.995 5 11.5s.301-.883.662-1.123C6.026 10.134 6.501 10 7 10c.356 0 .7.068 1 .196V4.41a1 1 0 0 1 .804-.98z"/>
+                    <path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1"/>
+                </svg>
+            </div>
+            <div class="orbit-rtf">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 16 16">
+                    <path d="M7 4.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0m-.861 1.542 1.33.886 1.854-1.855a.25.25 0 0 1 .289-.047l1.888.974V7.5a.5.5 0 0 1-.5.5H5a.5.5 0 0 1-.5-.5V7s1.54-1.274 1.639-1.208M5 9a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1z"/>
+                    <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1"/>
+                </svg>
+            </div>
+        </div>
+        <div class="white-space"></div>
+        <div class="hero">
+            <div class="white-space"></div>
+            Make your presentations, docs, and PDFs truly accessible - with snappy edits to structure, alt text, and tags, Shpruce is your one-stop-shop for document remediation.
+            <div class="white-space">
+                <!-- <button type="button" onclick="alert('test')">Try it now</button> -->
+                <a href="https://shpruce.co/" class="button">Try it now</a>
+            </div>
+        <br>
+        <div class="body-content about-margin">
+            <div class="card-grid">
+                <div class="card1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-badge-cc" viewBox="0 0 16 16">
+                        <path d="M3.708 7.755c0-1.111.488-1.753 1.319-1.753.681 0 1.138.47 1.186 1.107H7.36V7c-.052-1.186-1.024-2-2.342-2C3.414 5 2.5 6.05 2.5 7.751v.747c0 1.7.905 2.73 2.518 2.73 1.314 0 2.285-.792 2.342-1.939v-.114H6.213c-.048.615-.496 1.05-1.186 1.05-.84 0-1.319-.62-1.319-1.727zm6.14 0c0-1.111.488-1.753 1.318-1.753.682 0 1.139.47 1.187 1.107H13.5V7c-.053-1.186-1.024-2-2.342-2C9.554 5 8.64 6.05 8.64 7.751v.747c0 1.7.905 2.73 2.518 2.73 1.314 0 2.285-.792 2.342-1.939v-.114h-1.147c-.048.615-.497 1.05-1.187 1.05-.839 0-1.318-.62-1.318-1.727z"/>
+                        <path d="M14 3a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zM2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/>
+                    </svg>
+                    <br>
+                    Robust video captioning with <a href="https://github.com/moonshine-ai/moonshine-js/">MoonshineJS</a>
+                </div>
+                <div class="card1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-table" viewBox="0 0 16 16">
+                        <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm15 2h-4v3h4zm0 4h-4v3h4zm0 4h-4v3h3a1 1 0 0 0 1-1zm-5 3v-3H6v3zm-5 0v-3H1v2a1 1 0 0 0 1 1zm-4-4h4V8H1zm0-4h4V4H1zm5-3v3h4V4zm4 4H6v3h4z"/>
+                    </svg>
+                    <br>
+                    Conquer complex tables with point-and-click controls
+                </div>
+                <div class="card1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-bandaid" viewBox="0 0 16 16">
+                        <path d="M14.121 1.879a3 3 0 0 0-4.242 0L8.733 3.026l4.261 4.26 1.127-1.165a3 3 0 0 0 0-4.242M12.293 8 8.027 3.734 3.738 8.031 8 12.293zm-5.006 4.994L3.03 8.737 1.879 9.88a3 3 0 0 0 4.241 4.24l.006-.006 1.16-1.121ZM2.679 7.676l6.492-6.504a4 4 0 0 1 5.66 5.653l-1.477 1.529-5.006 5.006-1.523 1.472a4 4 0 0 1-5.653-5.66l.001-.002 1.505-1.492z"/>
+                        <path d="M5.56 7.646a.5.5 0 1 1-.706.708.5.5 0 0 1 .707-.708Zm1.415-1.414a.5.5 0 1 1-.707.707.5.5 0 0 1 .707-.707M8.39 4.818a.5.5 0 1 1-.708.707.5.5 0 0 1 .707-.707Zm0 5.657a.5.5 0 1 1-.708.707.5.5 0 0 1 .707-.707ZM9.803 9.06a.5.5 0 1 1-.707.708.5.5 0 0 1 .707-.707Zm1.414-1.414a.5.5 0 1 1-.706.708.5.5 0 0 1 .707-.708ZM6.975 9.06a.5.5 0 1 1-.707.708.5.5 0 0 1 .707-.707ZM8.39 7.646a.5.5 0 1 1-.708.708.5.5 0 0 1 .707-.708Zm1.413-1.414a.5.5 0 1 1-.707.707.5.5 0 0 1 .707-.707"/>
+                    </svg>
+                    <br>
+                    Create richly tagged documents without editing source text
+                </div>
+                <div class="card1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-stack" viewBox="0 0 16 16">
+                        <path d="m14.12 10.163 1.715.858c.22.11.22.424 0 .534L8.267 15.34a.6.6 0 0 1-.534 0L.165 11.555a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.66zM7.733.063a.6.6 0 0 1 .534 0l7.568 3.784a.3.3 0 0 1 0 .535L8.267 8.165a.6.6 0 0 1-.534 0L.165 4.382a.299.299 0 0 1 0-.535z"/>
+                        <path d="m14.12 6.576 1.715.858c.22.11.22.424 0 .534l-7.568 3.784a.6.6 0 0 1-.534 0L.165 7.968a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0z"/>
+                    </svg>
+                    <br>
+                    Clear your accessibility backlog with batch options
+                </div>
+            </div>
+            <div class="white-space"></div>
+            <article>
+                <section>
+                    <h2>It Looks Fine. That's the Problem.</h2>
+                        <p>You open the document and glance through it. Headings are clear, the chart makes sense, nothing's out of place. To you, it reads fine.</p>
+                        <p>The hard part isn't spotting what's wrong. It's translating what you see into something a screen reader can actually parse, and most tools make that harder than it needs to be. Buried menus. Settings with no clear effect. No way to tell if your fix actually worked.</p>
+                        <p>Shpruce works differently. Point at a heading, a chart, an image, and tag it for what it is. What you already know about your document becomes real structure, without digging through menus or second-guessing whether anything changed.</p>
+                </section>
+            </article>
+            <div class="white-space"></div>
+            <div class="white-space"></div>
+            <footer>&copy Ethan<span class="bar">&nbsp;&nbsp;|&nbsp;&nbsp;</span><a href="pages/about.html">About Us</a></footer>
+        </div>
+    </body>
 </html>
