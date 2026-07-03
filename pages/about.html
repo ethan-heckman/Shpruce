@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content ="This is Ethan's Final Assignment">
-    <title>About</title>
-    <meta charset="UTF-8">
+    <title>About — Shpruce</title>
     <link rel="stylesheet" href="../css/style.css">
     <!--Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,10 +18,11 @@
     </script>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <header>
         <!--Logo-->
-        <a href="../index.html">
-            <div class="logo"><img src="../images/shpruce-wordmark-light.svg" width="185" height="72"></div>
+        <a href="../index.html" aria-label="Shpruce home">
+            <div class="logo"><img src="../images/shpruce-wordmark-light.svg" width="185" height="72" alt=""></div>
         </a>
         <!--Content-->
         <div class="header-links">
@@ -33,31 +33,29 @@
         <!--Login Button-->
         <!-- <div class="login-button"><button type="button">&nbsp;Login&nbsp;</button></div> -->
     </header>
-    <main class="about-margin">
+    <main class="about-margin" id="main-content">
         <br>
-        <div class="about-big">About</div>
+        <h1 class="about-big">About</h1>
         <br>
         <div class="quote-card">
             <div class="quote-pic">
                 <img src="../images/profile_crop.jpg" alt="Ethan as child" loading="lazy" width="200">
             </div>
-            <section>
-                <p>Ethan<br><sub>Accessibility Professional, Aspiring Designer, Idiot</sub></p>
-            </section>
+            <div class="quote-caption">
+                <p>Ethan<br><span class="tagline">Accessibility Professional, Aspiring Designer, Idiot</span></p>
+            </div>
         </div>
         <div class="white-space"></div>
         <article>
-            <section>
-                <h2>Why We Built Shpruce</h2>
-                <p>Accessibility standards aren't light reading. WCAG, Section 508, PDF/UA. Most people doing this work didn't sign up to become document compliance experts, but somewhere along the way, that became the job.</p>
-                <p>Shpruce was built for that gap. Not for people who already know which heading level breaks screen reader navigation, but for people figuring it out as they go, in between everything else on their plate.</p>
-                <p>You don't need to memorize the standards. You need a tool that knows them, explains what it's flagging and why, and gets you to compliant without making you feel like you should've known better.</p>
-                <p>You're not the only one responsible for getting this right, and you shouldn't have to work like you are.</p>
-            </section>
+            <h2>Why We Built Shpruce</h2>
+            <p>Accessibility standards aren't light reading. WCAG, Section 508, PDF/UA. Most people doing this work didn't sign up to become document compliance experts, but somewhere along the way, that became the job.</p>
+            <p>Shpruce was built for that gap. Not for people who already know which heading level breaks screen reader navigation, but for people figuring it out as they go, in between everything else on their plate.</p>
+            <p>You don't need to memorize the standards. You need a tool that knows them, explains what it's flagging and why, and gets you to compliant without making you feel like you should've known better.</p>
+            <p>You're not the only one responsible for getting this right, and you shouldn't have to work like you are.</p>
         </article>
         <div class="white-space"></div>
         <div class="white-space"></div>
+        <footer>&copy; Ethan</footer>
     </main>
-    <footer>&copy Ethan</footer>
 </body>
 </html>

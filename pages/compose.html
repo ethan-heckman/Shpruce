@@ -4,8 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content ="This is Ethan's Final Assignment">
-        <title>Compose</title>
-        <meta charset="UTF-8">
+        <title>Compose — Shpruce</title>
         <!--Fonts-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,16 +16,17 @@
             }
         </script>
         <!--Quill Editor-->
-        <link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet">
         <link rel="stylesheet" href="../css/style.css">
         <!--Table Module-->
-        <link href=https://cdn.jsdelivr.net/npm/quill-table-better@1.1.7/dist/quill-table-better.css" style = "style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/quill-table-better@1.1.7/dist/quill-table-better.css">
     </head>
     <body>
+        <a href="#main-content" class="skip-link">Skip to main content</a>
         <header>
             <!--Logo-->
-            <a href="../index.html">
-                <div class="logo"><img src="../images/shpruce-wordmark-light.svg" width="185" height="72"></div>
+            <a href="../index.html" aria-label="Shpruce home">
+                <div class="logo"><img src="../images/shpruce-wordmark-light.svg" width="185" height="72" alt=""></div>
             </a>
             <!--Content-->
             <div class="header-links">
@@ -37,12 +37,13 @@
             <!--Login Button-->
             <!-- <div class="login-button"><button type="button">&nbsp;Login&nbsp;</button></div> -->
         </header>
-        <main>
+        <main class="editor-page" id="main-content">
+            <h1 class="sr-only">Compose</h1>
             <div id="editor">
                 <p>This text is editable!</p>
                 <p>Some initial <strong>bold</strong> text.</p>
                 <p>Create accessible documents, right here in your browser!</p>
-                <p><br /></p>
+                <p><br></p>
             </div>
             <script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
             <script>
@@ -60,9 +61,14 @@
                     ]
                 }
                 });
+                quill.root.setAttribute('aria-label', 'Document editor');
+                document.querySelectorAll('.ql-picker-label').forEach(label => {
+                    if (label.parentElement.classList.contains('ql-header')) label.setAttribute('aria-label', 'Text style');
+                    if (label.parentElement.classList.contains('ql-align')) label.setAttribute('aria-label', 'Text alignment');
+                });
             </script>
             <script src="../scripts/paginate.js"></script>
         </main>
-        <div class="comp-footer">&copy Ethan</div>
+        <div class="comp-footer">&copy; Ethan</div>
     </body>
 </html>
